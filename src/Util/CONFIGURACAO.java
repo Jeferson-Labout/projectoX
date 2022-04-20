@@ -187,7 +187,7 @@ public class CONFIGURACAO extends javax.swing.JFrame {
                 if (LE_CONFIGURACAO_GRAVADA()) {//SE CONSEGUIR LER A GRAVAÇÃO REALIZADA PASSA PARA O PROXIMO PASSO
                     if (CRIA_DATA_BASE_COMPLETO()) { //SE NÃO OCORRER ERRO NO QUERES SQL  PASSA PARA O PROXIMO PASSO
                         FECHA_CONEXAO();//PASSOU TODOS OS PASSO AGORA IRÁ FECHAR A TELA E ABRIR OUTRA
-                        new Principal().setVisible(true); //CHAMO A TELA PRINCIPAL, OU SE QUIZER POSSO CHAMAR A TELA DE LOGIM. FICA A CRITERIO DO PROGRAMADOR
+//                        new Principal().setVisible(true); //CHAMO A TELA PRINCIPAL, OU SE QUIZER POSSO CHAMAR A TELA DE LOGIM. FICA A CRITERIO DO PROGRAMADOR
                         dispose();
                     } else {
                         btnSalvar.setEnabled(false);
