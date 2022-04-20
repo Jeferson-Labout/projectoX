@@ -376,7 +376,7 @@ public class CONFIGURACAO extends javax.swing.JFrame {
         try {
             Class.forName(driver);
             CONEXAO = DriverManager.getConnection("jdbc:mysql://" + SERVIDOR + ":" + PORTA_CONEXAO
-                    + "/" + BANCO, USUARIO, SENHA);
+                    + "/" + BANCO +"?useSSL=false", USUARIO, SENHA);
             com = true;
         } catch (ClassNotFoundException Fonte) {
             JOptionPane.showMessageDialog(null, "Driver nao localizado");
@@ -454,6 +454,7 @@ public class CONFIGURACAO extends javax.swing.JFrame {
             stm = CONEXAO.prepareStatement(sql);
             stm.execute();
             sucesso = true;
+             JOptionPane.showMessageDialog(null, "Banco de Dados criado com sucesso");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "Erro", 0);
         }
